@@ -1,6 +1,5 @@
 package com.manji.edu.config;
 
-import com.manji.edu.config.DynamicDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

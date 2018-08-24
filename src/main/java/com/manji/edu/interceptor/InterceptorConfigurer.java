@@ -9,6 +9,6 @@ public class InterceptorConfigurer extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new AuthenticationInterceptor()).addPathPatterns("/**").excludePathPatterns("/auth/login", "/druid/*");
+        /*registry.addInterceptor(new AuthenticationInterceptor()).addPathPatterns("/**").excludePathPatterns("/auth/login", "/druid/*");*/
     }
 }

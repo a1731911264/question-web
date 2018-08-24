@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(value = "com.manji.edu.dao",
+@EnableJpaRepositories(value = "com.demo.demo.dao",
         entityManagerFactoryRef = "writeEntityManagerFactory",
         transactionManagerRef="writeTransactionManager")
 public class WriteDataSourceConfig {
@@ -42,7 +42,7 @@ public class WriteDataSourceConfig {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.manji.edu.model");
+        factory.setPackagesToScan("com.demo.demo.model");
         factory.setDataSource(writeDruidDataSource);//数据源
         factory.setJpaPropertyMap(jpaProperties.getProperties());
         factory.afterPropertiesSet();//在完成了其它所有相关的配置加载以及属性设置后,才初始化

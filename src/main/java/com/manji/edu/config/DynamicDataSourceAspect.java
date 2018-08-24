@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 @Component
 public class DynamicDataSourceAspect {
     private Logger logger = LoggerFactory.getLogger(DynamicDataSourceAspect.class);
-    @Around("execution(public * com.manji.edu.service..*.*(..))")
+    @Around("execution(public * com.demo.demo.service..*.*(..))")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
         Method targetMethod = methodSignature.getMethod();
