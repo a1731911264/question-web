@@ -26,8 +26,8 @@ public class CheckImgServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
-		int width = 110;
-		int height = 38;
+		int width = 103;
+		int height = 35;
 
 		// 步骤一 绘制一张内存中图片
 		BufferedImage bufferedImage = new BufferedImage(width, height,
@@ -79,10 +79,10 @@ public class CheckImgServlet extends HttpServlet {
 			sb.append(c);
 			
 			// 将c 输出到图片
-			graphics2d.rotate(theta, x, 20);
-			graphics2d.drawString(String.valueOf(c), x, 20);
-			graphics2d.rotate(-theta, x, 20);
-			x += 30;
+			graphics2d.rotate(theta, x, 25);
+			graphics2d.drawString(String.valueOf(c), x, 25);
+			graphics2d.rotate(-theta, x, 25);
+			x += 25;
 		}
 		/**
 		 * 将验证码内容存储到ehcache中
