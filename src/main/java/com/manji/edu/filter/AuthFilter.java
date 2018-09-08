@@ -41,7 +41,7 @@ public class AuthFilter implements Filter {
             return;
         }
         String requestURI = request.getRequestURI();
-        if (requestURI.indexOf("login") > -1 || requestURI.indexOf("logout") > -1) {
+        if (requestURI.indexOf("login") > -1 || requestURI.indexOf("logout") > -1 || requestURI.indexOf("image-code") > -1) {
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }
